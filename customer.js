@@ -1,20 +1,18 @@
 class Customer{
-  constructor(roomNumber, leaveRoom){
+  constructor(roomNumber, checkoutOfHotel){
     this.roomNumber = roomNumber;
-    this.leave = leaveRoom;
-    this.leaveRoom(true);
+
+    this.checkoutOfHotel = checkoutOfHotel;
+    this.leaveRoom = null;
   }
-  orderRoomService(){
-    //
+  leave(){
+    if(!this.leaveRoom){
+      console.log("You aint in a room");
+      return false;
+    }
+    this.leaveRoom();
   }
-  leaveRoom(checkout){
-    if(checkout){
-      console.log("Customer wants to checkout ");
-      this.leave(true);
-    }
-    else{
-      console.log("Customer leaving room  ", this.roomNumber)
-      this.leave();
-    }
+  checkout(){
+    this.checkoutOfHotel();
   }
 }
