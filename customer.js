@@ -2,6 +2,7 @@ class Customer{
   constructor(roomNumber, leaveRoom){
     this.roomNumber = roomNumber;
     this.leave = leaveRoom;
+    this.leaveRoom(true);
   }
   orderRoomService(){
     //
