@@ -13,6 +13,6 @@ class Customer{
     this.leaveRoom();
   }
   checkout(){
-    this.checkoutOfHotel();
+    this.checkoutOfHotel(this);
   }
 }

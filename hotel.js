@@ -24,10 +24,10 @@ class Hotel{
     }
   }
   checkOutCustomer(customer) {
-    for(var i = 0; i < this.customers; i++){
+    for(var i = 0; i < this.customers.length; i++){
       if(this.customers[i] === customer){
         console.log('Rest in peace Customer');
-        delete this.customers[i];
+        this.customers.splice(i, 1);
         break;
       }
     }
