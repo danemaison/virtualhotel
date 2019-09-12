@@ -12,6 +12,7 @@ class Room {
     this.isVacant = false;
     this.customer = customer;
     this.customer.roomNumber = this.roomNumber;
+    this.customer.leaveRoom = this.removeCustomer;
   }
 
   removeCustomer (checkout) {
